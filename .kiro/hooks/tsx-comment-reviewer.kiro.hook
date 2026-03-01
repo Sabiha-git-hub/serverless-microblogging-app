@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "TSX Comment Reviewer",
+  "description": "Inspects TSX files for adequate commenting and adds comments directly to align with best practices",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "*.tsx"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Review the saved TSX file for comment quality and coverage. Check if components, complex logic, props interfaces, and key functions have appropriate comments. If commenting doesn't align with best practices (missing component descriptions, unclear logic, undocumented props), add clear and concise comments directly to the file. Focus on documenting what and why, not obvious how."
+  }
+}
